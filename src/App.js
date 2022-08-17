@@ -20,6 +20,7 @@ function App() {
           <Route path="/clipboard" element={<Add />} />
           <Route path="/profile" element={<Profile />}/>
         </Routes>
+
       </div>
     </BrowserRouter>
   );

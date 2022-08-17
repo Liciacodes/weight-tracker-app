@@ -1,28 +1,29 @@
-import React from 'react'
-import Card from './Card';
-
+import React from "react";
+import Card from "./Card";
 const Home = () => {
   return (
     <div>
-      <div className="first-screen">
+      <div>
         <h3 className="header-text">My weight loss progress</h3>
-
-        <div className="relative">
-          {/* <Arrow height="50" height="50"/> */}
-          <div className="triangle"></div>
-          <div className="min-value">154LB</div>
-          <div className="average-value">95 LB</div>
-          <div className="semi-circle">
-            <div className="top"></div>
+      </div>
+      <div className="center">
+        <div className="progress">
+          <div className="barOverflow">
+            <div className="bar"></div>
           </div>
-          <div className="max-value">135LB</div>
+          <span>148</span>
+          <p> 13 Ib left to my goal</p>
         </div>
       </div>
-      <h4>Trends</h4>
-
-      <Card />
+      <h3 className="trends">Trends </h3>
+      <section className="grid">
+        <Card lastdays="LAST 7 DAYS" weight="2" />
+        <Card lastdays="LAST 30 DAYS" weight="4" />
+        <Card lastdays="ALL TIME" weight="6" />
+        <Card lastdays="MEDIAN WEIGHT" weight="150" />
+      </section>
     </div>
   );
-}
+};
 
-export default Home
+export default Home;

@@ -1,75 +1,16 @@
 body {
-  margin: 0 0 55px 0;
-}
-.first-screen {
-  margin: 30px;
+  margin: 0;
 }
 
 .header-text {
   text-align: center;
- 
-}
-
-.relative {
-  position: relative;
-  margin-left: -25px;
+  line-spacing:16px;
+  margin-top: 50px;
+  /* font-size: 16px;
+  color:#9e9ea7;
   
-}
-
-div.top {
-  /* background: steelblue; */
-  border: 5px solid #f98263;
-  border-bottom: none;
-  display: inline-block;
-  margin: 0 1em 1em 0;
-}
-
-.top {
-  height: 75px;
-  width: 150px;
-}
-
-.top {
-  border-top-left-radius: 150px;
-  border-top-right-radius: 150px;
-}
-
-.triangle {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 10px 10px 0 10px;
-  border-color: grey transparent transparent transparent;
-  top: 46px;
-  left: 165px;
-}
-
-.min-value {
-  position: absolute;
-  top: 127px;
-  left: 28px;
-}
-
-.average-value {
-  position: absolute;
-  left: 135px;
-  top: 15px;
-}
-
-.semi-circle {
-  left: 100px;
-  position: absolute;
-  top: 60px;
-}
-
-.max-value {
-  position: absolute;
-  top: 125px;
-  left: 270px;
-}
-.card-card {
-  display: flex;
+  font-weight:400;
+  font-family (stack):"Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif */
 }
 
 .fa-thin {
@@ -86,82 +27,160 @@ nav {
   margin-bottom: 0;
   height: 55px;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-   background-color: #fff; 
+  background-color: #fff;
 }
 
 .color {
   color: RGB(177, 175, 183);
   padding: 14px 16px;
-   font-size: 18px;
+  font-size: 18px;
 }
 
 .red {
   background: #ff805f;
   color: white;
-  border-radius: 50%; 
+  border-radius: 50%;
 }
 
-    .current-weight {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 50px 0;
-    }
+.current-weight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
 
-    .weight-text {
-      padding: 0 60px;
-      font-size: 30px;
-      color: #403f47;
-    }
+.weight-text {
+  padding: 0 60px;
+  font-size: 30px;
+  color: #403f47;
+}
 
-    .weight-number {
-      font-size: 50px;
-      color: #403f47;
-       margin-top: 50px;
-    }
+.weight-number {
+  font-size: 50px;
+  color: #403f47;
+  margin-top: 50px;
+}
 
-    .weight-measurement {
-      color: #fff;
-      background:#8173bf;
-      width: 50px;
-      height: 20px;
-      text-align: center;
-      border-radius: 5px;
-    }
+.weight-measurement {
+  color: #fff;
+  background: #8173bf;
+  width: 50px;
+  height: 20px;
+  text-align: center;
+  border-radius: 5px;
+}
 
-    .weight-button {
-      width: 250px;
-      height: 50px;
-      border-radius: 10px;
-      border: none;
-      background: #ff805f;
-      color: #fff;
-      font-size: 16px;
-      margin-top: 100px;
-    }
+.weight-button {
+  width: 250px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background: #ff805f;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 100px;
+}
 
-    input {
-      width: 80%;
-      padding:12px 20px;
-      margin: 8px 0;
-      box-sizing: border-box;
-      border-radius: 6px;
-      border: 2px solid gray
-      ;
-    }
+input {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 6px;
+  border: 2px solid gray;
+}
 
-    .flex {
-      display: inline-block;
-      margin:100px auto;
-      text-align: center;
-    }
+.flex {
+  display: inline-block;
+  margin: 100px auto;
+  text-align: center;
+}
 
-    ::placeholder {
-      color: #fd4513;
-    }
+::placeholder {
+  color: #fd4513;
+}
 
-    .new {
-      margin-top: 20px;
-      width: 300px;
-    }
+.new {
+  margin-top: 20px;
+  width: 300px;
+}
+
+.progress{
+  position: relative;
+  margin:4px;
+  float:left;
+  text-align: center;
+}
+
+.barOverflow{ /* Wraps the rotating .bar */
+  position: relative;
+  overflow: hidden; /* Comment this line to understand the trick */
+  width: 90px; height: 45px; /* Half circle (overflow) */
+  margin-bottom: -14px;
+  margin-left: 25px; /* bring the numbers up */
+}
+
+.bar{
+  text-align: center;
+  position: absolute;
+  top: 0; left: 0;
+  width: 90px; height: 90px; /* full circle! */
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 5px solid RGB(237, 240, 242);     /* half gray, */
+  border-bottom-color: red;  /* half azure */
+  border-left-color: #f67d5a;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.weight-container {
+  width: 150px;
+  height: 100px;
+  border: 1px solid #edf1f3;
+  border-radius: 8px;
+}
+
+.trends{
+  margin-top: 100px;
+  margin-left: 15px;
+}
+.grid {
+  gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.last-days {
+ padding: 0 10px;
+ font-weight: 100
+
+}
+
+.card-lb {
+padding: 0 10px;
+}
+
+.card-figure {
+  font-size: 1.8rem;
+  margin-right: 5px;
+}
+  .arrow-icon {
+    color: #5CD798;
+    font-size: 15px;
+    margin-right: 5px;
+}
+  
+#my-chart.line {
+  height: 200px;
+  max-width: 400px;
+  margin: 0 auto;
